@@ -17,9 +17,9 @@ class CategoriaResource extends JsonResource
         return [
             'id' => $this->id,
             'nombre' => $this->nombre,
-            'icono' => $this->icono,
+            'icono' => $this->icono
             // 'nombre_id' => $this->id . " - " . $this->nombre,
-            
+
         ];
     }
 }
