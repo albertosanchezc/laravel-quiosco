@@ -19,5 +19,7 @@ class DatabaseSeeder extends Seeder
         * @return vood
         */
         $this->call(CategoriaSeeder::class);
+        $this->call(ProductoSeeder::class);
+
     }
 }
