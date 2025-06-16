@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Producto;
 use Illuminate\Http\Request;
+use App\Http\Resources\ProductoCollection;
 
 class ProductoController extends Controller
 {
@@ -13,6 +14,11 @@ class ProductoController extends Controller
     public function index()
     {
         //
+
+        return new ProductoCollection(Producto::all());
+        // return new ProductoCollection(Producto::orderBy('id', 'DESC')->paginate(10);Si se desea paginar
+        
+
     }
 
     /**
