@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
     //
-    public function register(RegistroRequest $request){
+    public function register(RegistroRequest $request)
+    {
         // Validar el registro
         $data = $request->validated();
 
@@ -20,18 +21,12 @@ class AuthController extends Controller
         ]);
 
         return [
-            'token' => $user->creteToken('token')->plainTextToken,
+            'token' => $user->createToken('token')->plainTextToken,
             'user' => $user
         ];
     }
-    
-    public function login(Request $request){
 
-    }
+    public function login(Request $request) {}
 
-    public function logout(Request $request){
-
-    }
-    
-    
+    public function logout(Request $request) {}
 }
