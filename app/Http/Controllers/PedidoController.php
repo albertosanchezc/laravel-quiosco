@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pedido;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PedidoController extends Controller
 {
@@ -20,7 +21,21 @@ class PedidoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Almacenar una orden
+        $pedido = new Pedido;
+        $pedido->user_id = Auth::user()->id;
+        $pedido->total = $request->total;
+        $pedido->save();
+
+        // Obtener el ID del pedido
+
+        // Obtener los productos
+
+        // Formatear un arreglo 
+
+        // Almacenar en la BD
+
+
         return [
             'message' => 'realizando pedido'
         ];
